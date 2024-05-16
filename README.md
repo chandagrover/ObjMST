@@ -8,9 +8,12 @@ pip install -r requirements.txt
 
 # 1. Generating Object-based Multimodal Style Representations
  
- #model settings 
+ #model settings
+ 
 stylegan3_path="/path/to/stylegan3" # StyleGAN3 repo path
+
 stylegan3_pkl="/path/to/stylegan3/models/wikiart-1024-stylegan3-t-17.2Mimg.pkl" # StyleGAN3 wikiart pre-trained model path
+
 stya2k_path="/path/to//StyA2K" # AdaAttN repo path
 
 
