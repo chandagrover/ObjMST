@@ -10,9 +10,9 @@ from PIL import Image
 
 if __name__ == '__main__':
     parser = get_arguments()
-    parser.add_argument('--input_dir', help='input image dir', default='/home/phdcs2/Hard_Disk/Projects/T2I/ObjMST_local/Input/Images')
+    parser.add_argument('--input_dir', help='input image dir', default='/path/to/Input/Images')
     parser.add_argument('--input_name', help='training image name', required=True)
-    parser.add_argument('--ref_dir', help='input reference dir', default='/home/phdcs2/Hard_Disk/Projects/T2I/ObjMST_local/outputs_fgbg/mask_ObjMST/')
+    parser.add_argument('--ref_dir', help='input reference dir', default='/path/to/outputs_fgbg/mask_ObjMST/')
     parser.add_argument('--ref_name', help='reference image name', required=True)
     parser.add_argument('--harmonization_start_scale', help='harmonization injection scale', type=int, required=True)
     parser.add_argument('--mode', help='task to be done', default='harmonization')
@@ -67,8 +67,8 @@ if __name__ == '__main__':
             out = SinGAN_generate(Gs[n:], Zs[n:], reals, NoiseAmp[n:], opt, in_s, n=n, num_samples=1)
             out = (1-mask)*real+mask*out
             # print("dir2save=", dir2save)
-            sty_op="/home/phdcs2/Hard_Disk/Projects/T2I/ObjMST_local/outputs_fgbg/mask_ObjMST/"+ filefolder+ "/" + inp_name[:-4] + "_" + filename
-            plt.imsave("/home/phdcs2/Hard_Disk/Projects/T2I/ObjMST_local/outputs_fgbg/mask_ObjMST/"+ filefolder+ "/" + inp_name[:-4] + "_" + filename, functions.convert_image_np(out.detach()), vmin=0, vmax=1)
+            sty_op="/path/to/outputs_fgbg/mask_ObjMST/"+ filefolder+ "/" + inp_name[:-4] + "_" + filename
+            plt.imsave("/path/to/outputs_fgbg/mask_ObjMST/"+ filefolder+ "/" + inp_name[:-4] + "_" + filename, functions.convert_image_np(out.detach()), vmin=0, vmax=1)
 
             image = Image.open(sty_op)
 

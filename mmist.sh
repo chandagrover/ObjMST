@@ -1,14 +1,14 @@
 # model settings
-stylegan3_path="/home/phdcs2/Hard_Disk/Projects/T2I/ObjMST_local/source_code/fg_stylization/stylegan3" # StyleGAN3 repo path
-stylegan3_pkl="/home/phdcs2/Hard_Disk/Projects/T2I/ObjMST_local/source_code/fg_stylization/stylegan3/models/wikiart-1024-stylegan3-t-17.2Mimg.pkl" # StyleGAN3 wikiart pre-trained model path
-stya2k_path="/home/phdcs2/Hard_Disk/Projects/T2I/ObjMST_local/source_code/fg_stylization/StyA2K" # AdaAttN repo path
+stylegan3_path="/path/to/source_code/fg_stylization/stylegan3" # StyleGAN3 repo path
+stylegan3_pkl="/path/to/source_code/fg_stylization/stylegan3/models/wikiart-1024-stylegan3-t-17.2Mimg.pkl" # StyleGAN3 wikiart pre-trained model path
+stya2k_path="/path/to/source_code/fg_stylization/StyA2K" # AdaAttN repo path
 
 # experiment settings
 exp_name="mask_ObjMST" # experiment name, which determines the output folder name
 
 # set up the content images
 # content_paths="./contents/avril.jpg ./contents/cornell.jpg ./contents/modern.jpg" # use multiple content images
-content_paths="/home/phdcs2/Hard_Disk/Projects/T2I/ObjMST_local/Input/Images/" # or use a folder / multiple folders of content images
+content_paths="/path/to/Input/Images/" # or use a folder / multiple folders of content images
 
 
 # set up the multimodal style inputs

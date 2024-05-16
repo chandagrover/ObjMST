@@ -22,7 +22,7 @@ def get_args():
     parser.add_argument('--output_dir', type=str, required=True, help='path to target folder')
     parser.add_argument('--content_paths', nargs='+', type=str, default=[], help='paths to content file or dirs')
     parser.add_argument('--stya2k_path', type=str, default='./StyA2K', help='path to StyA2K model')
-    parser.add_argument('--mask_paths', type=int, default=['/home/phdcs2/Hard_Disk/Projects/T2I/ObjMST_local/Input/masks/'], help='Segmentation Mask Path')
+    parser.add_argument('--mask_paths', type=int, default=['/path/to/Input/masks/'], help='Segmentation Mask Path')
     parser.add_argument('--n_ens', type=int, default=None, help='number of ensemble')
     return parser.parse_args()
 

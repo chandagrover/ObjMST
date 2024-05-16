@@ -16,8 +16,8 @@ import utils_fgbg as utils
 start_time = time.time()
 
 parser = argparse.ArgumentParser()
-parser.add_argument('--content_base', type=str, default='/home/phdcs2/Hard_Disk/Projects/T2I/ObjMST_local/Input/Images/', help='path to content base folder')
-parser.add_argument('--masks_base', type=str, default='/home/phdcs2/Hard_Disk/Projects/T2I/ObjMST_local/Input/masks/', help='path to masks folder')
+parser.add_argument('--content_base', type=str, default='/path/to/Input/Images/', help='path to content base folder')
+parser.add_argument('--masks_base', type=str, default='/path/to/Input/masks/', help='path to masks folder')
 parser.add_argument('--exp_name', type=str, default="default_new", help='Experiment name')
 parser.add_argument('--sty_text', nargs='*', type=str, default=[], help='style description text')
 parser.add_argument('--sty_img', nargs='*', type=str,  default=[], help='paths to style image')
@@ -50,8 +50,8 @@ parser.add_argument('--weight_decay', type=float, default=0.0)
 parser.add_argument('--random_ws', action='store_true', help='randomly init the w+ space')
 parser.add_argument('--naive_inversion', action='store_true', help='naive inversion for style image')
 
-parser.add_argument('--stylegan3_path', type=str, default='/home/phdcs2/Hard_Disk/Projects/T2I/ObjMST_local/source_code/fg_stylization/stylegan3')
-parser.add_argument('--stylegan3_pkl', type=str, default='/home/phdcs2/Hard_Disk/Projects/T2I/ObjMST_local/source_code/fg_stylization/stylegan3/models/wikiart-1024-stylegan3-t-17.2Mimg.pkl')
+parser.add_argument('--stylegan3_path', type=str, default='/path/to/source_code/fg_stylization/stylegan3')
+parser.add_argument('--stylegan3_pkl', type=str, default='/path/to/source_code/fg_stylization/stylegan3/models/wikiart-1024-stylegan3-t-17.2Mimg.pkl')
 parser.add_argument('--save_ws', action='store_true', help='save the inverted ws to file')
 parser.add_argument('--save_rep_every_log', action='store_true', help='save the style representation every 20 iters')
 
