@@ -28,11 +28,14 @@ content_paths="/path/to//Input/content/" # or use a folder / multiple folders of
 
 
 #set up the multimodal style inputs
+
 sty_text="Copper plate engraving" # the style text description
+
 sty_img="/path/to/input/styles/contrast_of_forms.jpg" # the source style image
 
 
 #Generating Object-Based Style Representations
+
 MKL_THREADING_LAYER=GNU python source_code/fg_stylization/gen_style_reps_fgbg.py \
     --exp_name $exp_name \
     --sty_text "$sty_text" \
@@ -41,7 +44,9 @@ MKL_THREADING_LAYER=GNU python source_code/fg_stylization/gen_style_reps_fgbg.py
     --alpha_img 500 \
     --stylegan3_path $stylegan3_path \
     --stylegan3_pkl $stylegan3_pkl 
+    
 #Then, apply the style representations to the content images to generate Foreground Stylized Output
+
 python source_code/fg_stylization/apply_style_reps_fgmaskstya2k.py \
     --style_reps_dir outputs_fgbg/$exp_name/style_reps \
     --output_dir outputs_fgbg/$exp_name/fg_stylized_imgs \
