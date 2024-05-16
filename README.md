@@ -49,7 +49,7 @@ python source_code/fg_stylization/apply_style_reps_fgmaskstya2k.py \
     --stya2k_path $stya2k_path
 
 
-# 2. For single Text condition on Salient Object
+# 2. For single Text condition on Salient Object.
 
 a) #Train Input image using SinGAN
 
@@ -60,11 +60,13 @@ b) # Harmonize the above input image as background on foreground Stylized Output
 
 python source_code/bg_stylization/harmonization.py --input_name 'sailboat.png' --ref_name "fg_stylized_imgs/Copperplateengraving+contrast-of-forms_sailboat.png" --harmonization_start_scale 8
 
-# 3. Background Stylization
+# 3. For Double Text Condition on Salient and Surrounding Element.
 
 a) #Train Background image using SinGAN
+
  python source_code/bg_stylization/main_train.py --input_name "Desert_Sand.png"
 
 b) #Harmonize the above trained background image on the foreground Stylized Output
+
 python source_code/bg_stylization/harmonization.py --input_name 'sailboat.png' --ref_name "fg_stylized_imgs/Copperplateengraving+contrast-of-forms_sailboat.png" --harmonization_start_scale 8
 
