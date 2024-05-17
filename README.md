@@ -1,10 +1,19 @@
+# Requirements
+- Ubuntu 20.04
+- download the wikiart pre-trained StyleGAN3 model from [here]([url](https://drive.google.com/file/d/18MOpwTMJsl_Z17q-wQVnaRLCUFZYSNkj)) 
+- download the pretrained StyA2K model from [here](https://github.com/mrzhu-cool/StyA2K/tree/main/checkpoints/A2K) and copy it to the checkpoints folder in the [StyA2K repo](https://github.com/mrzhu-cool/StyA2K), and unzip it. See more detailes in the forked AdaAttN repo.
+
 # Installation
+use --recursive option while cloning this repository
 
 conda env create -f stylegan3/environment.yml
 
 conda activate ObjMST
 
 pip install -r requirements.txt
+
+
+run ObjMST.sh
 
 ## 1. Generating Object-based Multimodal Style Representations
  
