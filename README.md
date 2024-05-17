@@ -1,6 +1,6 @@
 # Requirements
 - Ubuntu 20.04
-- download the wikiart pre-trained StyleGAN3 model from [here]([url](https://drive.google.com/file/d/18MOpwTMJsl_Z17q-wQVnaRLCUFZYSNkj) 
+- download the wikiart pre-trained StyleGAN3 model from [here](https://drive.google.com/file/d/18MOpwTMJsl_Z17q-wQVnaRLCUFZYSNkj) 
 - download the pretrained StyA2K model from [here](https://github.com/mrzhu-cool/StyA2K/tree/main/checkpoints/A2K) and copy it to the checkpoints folder in the [StyA2K repo](https://github.com/mrzhu-cool/StyA2K), and unzip it. 
 
 # Installation
@@ -83,4 +83,7 @@ a) #Train Background image using SinGAN
 b) #Harmonize the above trained background image on the foreground Stylized Output
 
 python source_code/bg_stylization/harmonization.py --input_name 'sailboat.png' --ref_name "fg_stylized_imgs/Copperplateengraving+contrast-of-forms_sailboat.png" --harmonization_start_scale 8
+
+## Acknowledgments
+This code builds on [mmist](https://github.com/hywang66/mmist)-and [StyA2K](https://github.com/mrzhu-cool/StyA2K). Thanks for open-sourcing!
 
