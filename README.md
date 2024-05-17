@@ -1,4 +1,4 @@
-# ObjMST
+# Installation
 
 conda env create -f stylegan3/environment.yml
 
